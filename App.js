@@ -8,7 +8,7 @@ export default function App() {
     console.log('Hello World, from React Native!');
 
     const realtime = new Ably.Realtime({
-      key: 'api_key',
+      key: process.env.EXPO_PUBLIC_ABLY_API_KEY,
     });
 
     const channel = realtime.channels.get('someChannel');
